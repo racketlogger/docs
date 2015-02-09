@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>RacketLogger :: Docs - <%= @item[:title] %></title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/docs.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="css/pygments.css" media="screen" rel="stylesheet" type="text/css">
+  </head>
+  <body class="api">
+    <div id="header-wrapper">
+      <div id="header">
+        <div>
+          <a class="logo" href="/">RacketLogger :: Docs</a>
+          <ul class="nav">
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="wrapper">
+      <%= yield %>
+    </div>
+  </body>
+</html>
