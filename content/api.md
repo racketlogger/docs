@@ -1,13 +1,13 @@
 ---
 title: API
 ---
-# Overview
+* TOC
+{:toc}
+
+## Overview
 
 This describes the resources that make up the official RacketLogger API. If you have any problems or requests please contact
 support.
-
-* TOC
-{:toc}
 
 ## Current Version
 

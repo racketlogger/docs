@@ -229,7 +229,7 @@ a img {
   float: right;
   font-weight: bold;
   margin-top: 20px;
-  text-shadow: white 1px 1px 0px;
+  text-shadow: #444 1px 1px 0px;
   font-size: 14px;
 }
 
@@ -241,7 +241,7 @@ a img {
 }
 
 #header .nav a {
-  color: #515151;
+  color: #f1f1f1;
   outline: none;
   text-decoration: none;
   padding: 20px 11px 19px;
