@@ -15,3 +15,7 @@ If you have never played flex (or regulation) matches check the [first-time flex
 ## Rules
 
 Read the [RacketLogger rules](rules) page for a description of our rules.
+
+## Scheduling Matches
+
+We have some guidelines for [scheduling flex league matches](scheduling-matches).
