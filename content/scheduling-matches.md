@@ -11,11 +11,11 @@ These are some guidelines to schedule matches with your opponents.
 
 ## Flexibility
 
-The **Week** column is meant to indicate the main week scheduled to play a match.
+The **Week** column is meant to suggest the main week scheduled to play a match. However, matches can be played at any time as long as all parties involved agree. If both parties agree to play the matches after the deadline (hover over or tap on the date range to see it), send a message to the league founder to have the deadline extended.
 
 For example: "Feb 13 ~ Feb 20" means you should try to play starting between February 13th and February 20th.
 
-However, busy schedules and weather could change things.
+Busy schedules and weather could change things.
 
 If you hover over that range (or tap/hold or double tab in mobile devices), it should show a tooltip indicating the deadline by which this match should be played. Try very hard to schedule your game by then. Otherwise your opponent may call a **Default** if you cannot schedule a game by then.
 

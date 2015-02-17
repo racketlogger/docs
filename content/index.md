@@ -4,9 +4,13 @@ title: RacketLogger Help
 * TOC
 {:toc}
 
-## Overview
+## How it Works
 
-This site describes the various resources that are available to help RacketLogger players. If you have any problems or requests please contact support.
+RacketLogger leagues are [flex leagues](http://www.racketlogger.com/leagues/flex), which means they are flexible in nature. The RacketLogger system is about playing regularly, playing your **best tennis**, improving through play in a match environment, and being flexible in time and location of play.
+
+The RacketLogger system schedules you to play, weekly, for 7 to 9 weeks with some rest week often in the middle of the season. Each match can be played ahead or with (a little) delay. It's flexible, because you choose your "home court" but you can arrange the time and, to the extent possible, the location, of the each match with your opponents.
+
+Find more details in our [flex leagues](http://www.racketlogger.com/leagues/flex) page.
 
 ## First-time Players
 
@@ -19,3 +23,17 @@ Read the [RacketLogger rules](rules) page for a description of our rules.
 ## Scheduling Matches
 
 We have some guidelines for [scheduling flex league matches](scheduling-matches).
+
+## FAQs
+
+### Q: Do I need to be a member of the USTA or other organization to join?
+
+**A:** There are no requirements for membership on any federation or club to you RacketLogger!
+
+### Q: Do I need to be officially rated at a given level to play?
+
+**A:** Not officially. Generally, you should know your level from 2.5, through 3.0, 3.5, 4.0, 4.5, 5.0, etc. based on others who you play with. The rating fluctuates over time based on your practice, fitness and play levels. Once you sign up for a first league once, that sets your level. If you do well, the league system will automatically promote you for future leagues, and if you do not do well, the league system will demote you.
+
+### Q: Do I need a car to participate?
+
+**A:** Most likely yes, however, it depends in your location and the other player locations. You can select your home court at a convenient place to you. That takes care of about half your matches. You may try and see if your opponents can play at locations that have easy public transportation access. However, it's hard to tell if all opponents will be able to accomodate you with this for their home games.
