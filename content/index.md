@@ -16,9 +16,9 @@ Find more details in our [flex leagues](http://www.racketlogger.com/leagues/flex
 
 If you have never played flex (or regulation) matches check the [first-time flex players](first-time-players) page for a quick introduction.
 
-## Rules
+## Rules and Code of Conduct
 
-Read the [RacketLogger rules](rules) page for a description of our rules.
+Read the [RacketLogger rules](rules) page for a description of our rules and our [code of conduct](code-of-conduct).
 
 ## Scheduling Matches
 
