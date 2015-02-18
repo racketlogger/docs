@@ -10,4 +10,4 @@ The RacketLogger site was originally developed to keep track (to *log*) tennis r
 
 ## Developer API
 
-We are interested in developing an API for other apps to produce innovative uses of our site. Check [API documentation](api/) page for the details. Email support to get an API key!
+We are interested in developing an API for other apps to produce innovative uses of our site. Check [API documentation](/api) page for the details. Email support to get an API key!
