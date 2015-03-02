@@ -8,7 +8,13 @@ title: RacketLogger Rules
 
 The RacketLogger league rules are meant to engage and keep reliable tennis players, that show up to matches, have fun playing their best tennis game, and bring in a little competitive edge!
 
-* Schedules will be created suggesting a week for matches to be played. Matches can be played any time agreed upon by both players (or both doubles pairs). All matches should be completed and scores entered by the Season End Date for the program. Most leagues will schedule an extra week to complete all matches. Defaults should not be recorded until end of league season unless a player or doubles team has cancelled twice once a day/time has been confirmed. It is understood that some players may be unavailable during part of the season but planning to play more matches toward the end of the season.  Any match where one player or doubles team attempted to schedule a day/time with opponents that remained unplayed at the end of the season should be recorded as a default by the player/doubles team that attempted to schedule the match.
+* Schedules will be created suggesting a week for matches to be played.
+* Matches can be played any time agreed upon by both players (or both doubles pairs).
+* All matches should be completed and scores entered by the Season End Date for the program.
+* Most leagues will schedule an extra week to complete all matches.
+* Defaults should not be recorded until end of league season unless a player or doubles team has cancelled twice once a day/time has been confirmed.
+* It is understood that some players may be unavailable during part of the season but planning to play more matches toward the end of the season.
+* Any match where one player or doubles team attempted to schedule a day/time with opponents that remained unplayed at the end of the season should be recorded as a default by the player/doubles team that attempted to schedule the match.
 
 
 ## General Rules for League Play
@@ -27,9 +33,12 @@ The RacketLogger league rules are meant to engage and keep reliable tennis playe
 
 ## Match Format
 
-* Matches are played in a best-of-three set format *for leagues 3.5 and above*
-* For leagues *3.0 level and below*, the home player can opt, at the beginning of the match (*not later*, unless the opponent agrees) if a third set will be a tie-break game to best to 7, with difference of two.
-* Scores are kept for each match and submitted to RacketLogger
+* Matches are played in a best-of-three sets format.
+* Scores are kept for each match and submitted to RacketLogger for the league standings.
+
+### Third sets
+* For leagues *3.0 level and below*, the home player can opt, at the beginning of the match, and *not later* (unless the opponent agrees) to a full third set if it comes to that, or a tie-break game to best to 7 points, with difference of two.
+* For everyone else, the third set should be ended in a tie-break if the score reaches 6-6 and reported as 7-6. However, if *both players agree*, the game can continue can play to a difference of two matches, e.g. 10-8.
 
 ## General Tennis Rules
 
