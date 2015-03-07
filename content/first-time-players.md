@@ -56,6 +56,6 @@ The official rules in international tennis about warm-up is 5 minutes prior to t
 
 ## Reporting Scores
 
-After the match, anyone of the players can report the scores. Once the score is reported, players in the league get a confirmation by email.
+After the match, anyone of the players can report the scores by going to the schedule page and reporting it (last column). Once the score is reported, players in the league get a confirmation by email.
 
 If there was a mistake, you or your opponent can post corrections to the score for a brief while after the score is posted.
