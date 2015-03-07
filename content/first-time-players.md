@@ -53,3 +53,9 @@ Some locations may have a wall to hit prior to the match, or an area to run, or 
 Check with your opponent ahead. Some people like 5 minute own warm-ups, some like 10 or 15 minutes or even more. Some people warm up quickly, others require longer to feel ready to play at their best.
 
 The official rules in international tennis about warm-up is 5 minutes prior to the match. More than that is only reasonable if both you and your opponent agree. As always, be flexible and courteous.
+
+## Reporting Scores
+
+After the match, anyone of the players can report the scores. Once the score is reported, players in the league get a confirmation by email.
+
+If there was a mistake, you or your opponent can post corrections to the score for a brief while after the score is posted.

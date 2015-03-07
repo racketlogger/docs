@@ -13,10 +13,10 @@ p {
 }
 
 h1 {
-  font-size: 20px;
+  font-size: 27px;
   padding: .5em 0;
   margin: 2em 0 1em;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 ul { margin-left: 40px; }
@@ -64,11 +64,11 @@ h1 .header-anchor {
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 21px;
   color: #333;
   margin: 2em auto 1em;
   position: relative;
-  font-weight: 300;
+  font-weight: bold;
 }
 
 .library-list h1 {
