@@ -26,9 +26,13 @@ We have some guidelines for [scheduling flex league matches](scheduling-matches)
 
 ## FAQs
 
+### Q: What should I do once I am in a league?
+
+Once your league's schedule is posted, start contacting people in your first and/or second match to schedule matches. If you have never played a flex league, read the [first-time flex players](first-time-players).
+
 ### Q: Do I need to be a member of the USTA or other organization to join?
 
-**A:** There are no requirements for membership on any federation or club to you RacketLogger!
+**A:** There are no requirements for membership on any club, federation or anything to plan in a RacketLogger league!
 
 ### Q: Do I need to be officially rated at a given level to play?
 
