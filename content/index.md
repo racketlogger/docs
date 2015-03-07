@@ -28,7 +28,7 @@ We have some guidelines for [scheduling flex league matches](scheduling-matches)
 
 ### Q: What should I do once I am in a league?
 
-Once your league's schedule is posted, start contacting people in your first and/or second match to schedule matches. If you have never played a flex league, read the [first-time flex players](first-time-players).
+**A:** Once your league's schedule is posted, start contacting people in your first and/or second match to schedule matches. If you have never played a flex league, read the [first-time flex players](first-time-players).
 
 ### Q: Do I need to be a member of the USTA or other organization to join?
 
