@@ -24,6 +24,10 @@ Read the [RacketLogger rules](rules) page for a description of our rules and our
 
 We have some guidelines for [scheduling flex league matches](scheduling-matches).
 
+## Testimonials
+
+Check out [what our players are saying](testimonials)!
+
 ## FAQs
 
 ### Q: What should I do once I am in a league?
