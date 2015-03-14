@@ -28,6 +28,10 @@ We have some guidelines for [scheduling flex league matches](scheduling-matches)
 
 Check out [what our players are saying](testimonials)!
 
+## Logo and Guidelines
+
+If you plan to reference RacketLogger, please read this page with [RacketLogger logo](logo) guidelines and official logo.
+
 ## FAQs
 
 ### Q: What should I do once I am in a league?
