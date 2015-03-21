@@ -36,9 +36,10 @@ The RacketLogger league rules are meant to engage and keep reliable tennis playe
 * Matches are played in a best-of-three sets format.
 * Scores are kept for each match and submitted to RacketLogger for the league standings.
 
-### Third sets
+### Third Sets, tie-breaks
 * For leagues *3.0 level and below*, the home player can opt, at the beginning of the match, and *not later* (unless the opponent agrees) to a full third set if it comes to that, or a tie-break game to best to 7 points, with difference of two.
-* For everyone else, the third set should be ended in a tie-break if the score reaches 6-6 and reported as 7-6. However, if *both players agree*, the game can continue can play to a difference of two matches, e.g. 10-8.
+* For everyone else, the third set should be ended in a 10-point tie-break if the score reaches 6-6 and reported as 7-6.
+* However, if *both players agree before going past 6-6*, the game may be played to a difference of two matches, e.g. 10-8.
 
 ## General Tennis Rules
 
