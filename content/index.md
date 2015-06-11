@@ -24,6 +24,10 @@ Read the [RacketLogger rules](rules) page for a description of our rules and our
 
 We have some guidelines for [scheduling flex league matches](scheduling-matches).
 
+## Player ratings, Promotions and Relegations
+
+The goal of the league is to have fun, not competition. However, to make the most fun and most improvement, the play levels of the players should be similar. This is determined at the end of a league via the [ratings](ratings) for the players.
+
 ## Testimonials
 
 Check out [what our players are saying](testimonials)!
