@@ -29,6 +29,7 @@ The following rules are introduced by RacketLogger for rating leagues:
 ## Example
 
 A score of "6-4, 1-6, 6-0" means:
+
 * Set points: the winner gets a rating of +5 and the loser -5.
 * Game delta: 3 points (2-5+6) for the winner and -3 for the loser.
 * The winner of this match gets a rating of 8 (5+3) and the loser -8, for this match
