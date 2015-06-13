@@ -10,6 +10,8 @@ The RacketLogger league strives to be focused on fun and skill improvement, not 
 
 The players register a relative **rating system** as the season progresses. At the end of the season, this rating can determine the outcome of changes in the player play level. This in turn determines which league level that player can sign up for next.
 
+Note that we reserve the right to tweak this algorithm to compensate for feedback related to overrating/underrating players.
+
 ## Rules for Rating
 
 The following rules are introduced by RacketLogger for rating leagues:
