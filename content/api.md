@@ -19,7 +19,7 @@ All API access is over HTTP (no https for now), and accessed from the `api.racke
 domain. All data is sent and received as JSON.
 
 <pre class="terminal">
-$ curl -i http://api.racketlogger.com/rackets
+$ curl -i https://api.racketlogger.com/rackets
 
 HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
@@ -79,7 +79,7 @@ with a Content-Type of 'application/json':
 You can issue a `GET` request to the root endpoint to get all the endpoint categories that the API supports:
 
 <pre class="terminal">
-$ curl http://api.racketlogger.com
+$ curl https://api.racketlogger.com
 </pre>
 
 ## Client Errors
@@ -164,13 +164,13 @@ of private repositories to unauthorized users.
 ### OAuth2 Token (sent in a header)
 
 <pre class="terminal">
-$ curl -H "Authorization: token OAUTH-TOKEN" http://api.racketlogger.com
+$ curl -H "Authorization: token OAUTH-TOKEN" https://api.racketlogger.com
 </pre>
 
 ### OAuth2 Token (sent as a parameter)
 
 <pre class="terminal">
-$ curl http://api.racketlogger.com/?access_token=OAUTH-TOKEN
+$ curl https://api.racketlogger.com/?access_token=OAUTH-TOKEN
 </pre>
 
 Note that OAuth2 tokens can be obtain by emailing support.
@@ -178,7 +178,7 @@ Note that OAuth2 tokens can be obtain by emailing support.
 ### OAuth2 Key/Secret
 
 <pre class="terminal">
-$ curl 'http://api.racketlogger.com/users/whatever?client_id=xxxx&client_secret=yyyy'
+$ curl 'https://api.racketlogger.com/users/whatever?client_id=xxxx&client_secret=yyyy'
 </pre>
 
 This should only be used in server to server scenarios.  Don't leak your
