@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>RacketLogger :: Docs - RacketLogger Rating Process</title>
+    <link href="/css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="/css/docs.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/css/pygments.css" media="screen" rel="stylesheet" type="text/css">
+  </head>
+  <body class="api">
+    <div id="header-wrapper">
+      <div id="header">
+        <div>
+          <a class="logo" href="/">RacketLogger :: Help</a>
+          <ul class="nav">
+            <li><a href="http://www.racketlogger.com">RacketLogger Home</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="wrapper">
+      <ul id="markdown-toc">
+  <li><a href="#racketlogger-rating-process">RacketLogger Rating Process</a></li>
+  <li><a href="#rules-for-rating">Rules for Rating</a></li>
+  <li><a href="#moving-levels">Moving Levels</a></li>
+  <li><a href="#example">Example</a></li>
+</ul>
+
+<h2 id="racketlogger-rating-process">RacketLogger Rating Process</h2>
+
+<p>The RacketLogger league strives to be focused on fun and skill improvement, not pure competition. The most fun is when matches are played among players whose relative level to each other is somewhat similar. This provides the maximum enjoyment and it also arguably leads to the most amount of improvement in skills.</p>
+
+<p>The players register a relative <strong>rating system</strong> as the season progresses. At the end of the season, this rating can determine the outcome of changes in the player play level. This in turn determines which league level that player can sign up for next.</p>
+
+<p>Note that we reserve the right to tweak this algorithm to compensate for feedback related to overrating/underrating players.</p>
+
+<h2 id="rules-for-rating">Rules for Rating</h2>
+
+<p>The following rules are introduced by RacketLogger for rating leagues:</p>
+
+<ul>
+  <li>The rating is the average of the number of points a player obtains over the matches of a season: R = Sum(ratings)/matches</li>
+  <li>Each match provides the player with a rating: positive for the winner and equal but negative for the other player.</li>
+  <li>Each match rating is the sum of a <strong>set rating</strong> (positive points) and <strong>game delta</strong> (possibly negative): Match = Set rating + Game delta</li>
+  <li>Set rating: if the match went to 2 sets, the winner gets +8 points (-8 for the other player). If it went to 3 sets, the winner gets +5 and the loser -5.</li>
+  <li>Game delta: it’s the total sum of the differences of games in each set.</li>
+  <li>Default and unplayed matches do not count towards the rating</li>
+</ul>
+
+<h2 id="moving-levels">Moving Levels</h2>
+
+<ul>
+  <li>If at the end of the season the rating of a player is +10 or greater, the player is promoted to the next level up in the skills (typically 0.5 levels, e.g. 3.5 to 4.0)</li>
+  <li>Conversely, if the rating at the end of a season is -10 or lower, the player is relegated one level down.</li>
+</ul>
+
+<h2 id="example">Example</h2>
+
+<p>A score of “6-4, 1-6, 6-0” means:</p>
+
+<ul>
+  <li>Set points: the winner gets a rating of +5 and the loser -5.</li>
+  <li>Game delta: 3 points (2-5+6) for the winner and -3 for the loser.</li>
+  <li>The winner of this match gets a rating of 8 (5+3) and the loser -8, for this match</li>
+</ul>
+
+<p>If the same winning player above plays a subsequent match and gets a +12 rating, the average for these two matches is (8+12)/2 = +10.</p>
+
+<p>If the losing player in the example above now plays a match and gets a +16 rating the average would be (-8+16)/2 = +4 for those two maches.</p>
+
+    </div>
+    <footer id="footer">
+      <div class="lower_footer">
+        <div class="row">
+          <hr />
+          <div class="footer-cell">
+            <ul class="list-unstyled">
+		<li>
+		<a title="About RacketLogger" href="/about">About</a>
+		&middot;
+		<a href="http://www.racketlogger.com/leagues/flex">Flex Leagues</a>
+		&middot;
+		<a href="http://www.racketlogger.com/feedback">Feedback</a>
+		&middot;
+		<a href="https://github.com/racketlogger/docs">Source Code</a>
+	      </li>
+            </ul>
+          </div>
+          <div class="footer-cell">
+            <ul class="list-unstyled">
+		    <li>
+		    <a title="RacketLogger Home" href="http://www.racketlogger.com/">Home</a>
+		    &middot;
+		    <a title="Follow RacketLogger in Facebook" target="_blank" class="" href="https://www.facebook.com/racketlogger">Facebook</a>
+		    &middot;
+		    <a title="Follow RacketLogger in Twitter" class="" target="_blank" href="https://twitter.com/RacketLogger">Twitter</a>
+		    &middot;
+		    <a title="Follow RacketLogger in Google+" class="" target="_blank" rel="publisher" href="https://plus.google.com/113862405950070459386">Google+</a>
+		    </li>
+            </ul>
+          </div>
+          <div class="footer-cell">
+            <ul class="list-unstyled">
+			  <li>
+			  <a href="http://www.racketlogger.com/string" title="Tennis String Specs">String Specs</a>
+			  &middot;
+			  <a href="http://www.racketlogger.com/racket" title="Tennis Racket Specs">Racket Specs</a>
+			  <br/>
+			  <a href="http://www.racketlogger.com/string-explorer" title="Interactive Tennis String Specs Explorer">String Explorer</a>
+			  &middot;
+			  <a href="http://www.racketlogger.com/racket-explorer" title="Interactive Tennis Racket Specs Explorer">Racket Explorer</a>
+			  </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper">
+          <small id="copyright">Site design and logo &#169; 2015 <a href="http://www.racketlogger.com">RacketLogger</a>. User contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> with <a href="https://github.com/racketlogger/website/wiki/Attribution">attribution required</a>.</small><br /><br />
+      </div>
+    </footer>
+  </body>
+</html>

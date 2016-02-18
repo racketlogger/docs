@@ -1,0 +1,337 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>RacketLogger :: Docs - API</title>
+    <link href="/css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="/css/docs.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/css/pygments.css" media="screen" rel="stylesheet" type="text/css">
+  </head>
+  <body class="api">
+    <div id="header-wrapper">
+      <div id="header">
+        <div>
+          <a class="logo" href="/">RacketLogger :: Help</a>
+          <ul class="nav">
+            <li><a href="http://www.racketlogger.com">RacketLogger Home</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="wrapper">
+      <ul id="markdown-toc">
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#current-version">Current Version</a></li>
+  <li><a href="#schema">Schema</a></li>
+  <li><a href="#parameters">Parameters</a></li>
+  <li><a href="#root-endpoint">Root Endpoint</a></li>
+  <li><a href="#client-errors">Client Errors</a></li>
+  <li><a href="#http-redirects">HTTP Redirects</a></li>
+  <li><a href="#http-verbs">HTTP Verbs</a></li>
+  <li><a href="#authentication">Authentication</a></li>
+  <li><a href="#user-agent-required">User Agent Required</a></li>
+</ul>
+
+<h2 id="overview">Overview</h2>
+
+<p>This describes the resources that make up the official RacketLogger API. If you have any problems or requests please contact
+support.</p>
+
+<h2 id="current-version">Current Version</h2>
+
+<p>By default, all requests receive the latest version of the API. We will implement versioning at some point in the future.</p>
+
+<h2 id="schema">Schema</h2>
+
+<p>All API access is over HTTP (no https for now), and accessed from the <code>api.racketlogger.com</code>
+domain. All data is sent and received as JSON.</p>
+
+<pre class="terminal">
+$ curl -i https://api.racketlogger.com/rackets
+
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Status: 200 OK
+Content-Length: 999
+Cache-Control: max-age=0, private, must-revalidate
+X-Content-Type-Options: nosniff
+
+[ ... ]
+</pre>
+
+<p>All timestamps are returned in ISO 8601 format:</p>
+
+<pre><code>YYYY-MM-DDTHH:MM:SSZ
+</code></pre>
+
+<h3 id="summary-representations">Summary Representations</h3>
+
+<p>When you fetch a list of resources, the response includes a <em>subset</em> of the
+attributes for that resource. This is the “summary” representation of the
+resource. (Some attributes are computationally expensive for the API to provide.
+For performance reasons, the summary representation excludes those attributes.
+To obtain those attributes, fetch the “detailed” representation.)</p>
+
+<p><strong>Example</strong>: When you get a list of rackets, you get the summary
+representation of each racket. Here, we fetch the list of rackets owned
+by the “rafa” user:</p>
+
+<pre><code>GET /users/rafa/rackets
+</code></pre>
+
+<h3 id="detailed-representations">Detailed Representations</h3>
+
+<p>When you fetch an individual resource, the response typically includes <em>all</em>
+attributes for that resource. This is the “detailed” representation of the
+resource. (However, authorization can influence the amount of detail
+included in the representation.)</p>
+
+<p><strong>Example</strong>: When you get an individual’s rackets, you get the detailed
+representation of the repository.</p>
+
+<pre><code>GET /racket/xyz
+</code></pre>
+
+<p>The documentation provides an example response for each API method. The example
+response illustrates all attributes that are returned by that method.</p>
+
+<h2 id="parameters">Parameters</h2>
+
+<p>Many API methods take optional parameters. For GET requests, any parameters not
+specified as a segment in the path can be passed as an HTTP query string
+parameter:</p>
+
+<p>For POST, PATCH, PUT, and DELETE requests, parameters not included in the URL should be encoded as JSON
+with a Content-Type of ‘application/json’:</p>
+
+<h2 id="root-endpoint">Root Endpoint</h2>
+
+<p>You can issue a <code>GET</code> request to the root endpoint to get all the endpoint categories that the API supports:</p>
+
+<pre class="terminal">
+$ curl https://api.racketlogger.com
+</pre>
+
+<h2 id="client-errors">Client Errors</h2>
+
+<p>There are three possible types of client errors on API calls that
+receive request bodies:</p>
+
+<ol>
+  <li>
+    <p>Sending invalid JSON will result in a <code>400 Bad Request</code> response.</p>
+
+    <pre><code> HTTP/1.1 400 Bad Request
+ Content-Length: 35
+
+ {"message":"Problems parsing JSON"}
+</code></pre>
+  </li>
+  <li>
+    <p>Sending the wrong type of JSON values will result in a <code>400 Bad
+Request</code> response.</p>
+
+    <pre><code> HTTP/1.1 400 Bad Request
+ Content-Length: 40
+
+ {"message":"Body should be a JSON object"}
+</code></pre>
+  </li>
+  <li>
+    <p>Sending invalid fields will result in a <code>422 Unprocessable Entity</code>
+response.</p>
+
+    <pre><code> HTTP/1.1 422 Unprocessable Entity
+ Content-Length: 149
+
+ {
+   "message": "Validation Failed",
+   "errors": [
+     {
+       "resource": "Issue",
+       "field": "title",
+       "code": "missing_field"
+     }
+   ]
+ }
+</code></pre>
+  </li>
+</ol>
+
+<p>All error objects have resource and field properties so that your client
+can tell what the problem is.  There’s also an error code to let you
+know what is wrong with the field.  These are the possible validation error
+codes:</p>
+
+<h2 id="http-redirects">HTTP Redirects</h2>
+
+<p>We use HTTP redirection where appropriate. Clients should assume that any
+request may result in a redirection. Receiving an HTTP redirection is <em>not</em> an
+error and clients should follow that redirect. Redirect responses will have a
+<code>Location</code> header field which contains the URI of the resource to which the
+client should repeat the requests.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Status Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>301</code></td>
+      <td>Permanent redirection. The URI you used to make the request has been superseded by the one specified in the <code>Location</code> header field. This and all future requests to this resource should be directed to the new URI.</td>
+    </tr>
+    <tr>
+      <td>
+<code>302</code>, <code>307</code>
+</td>
+      <td>Temporary redirection. The request should be repeated verbatim to the URI specified in the <code>Location</code> header field but clients should continue to use the original URI for future requests.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Other redirection status codes may be used in accordance with the HTTP 1.1 spec.</p>
+
+<h2 id="http-verbs">HTTP Verbs</h2>
+
+<p>Where possible, the API strives to use appropriate HTTP verbs for each
+action.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Verb</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>HEAD</code></td>
+      <td>Can be issued against any resource to get just the HTTP header info.</td>
+    </tr>
+    <tr>
+      <td><code>GET</code></td>
+      <td>Used for retrieving resources.</td>
+    </tr>
+    <tr>
+      <td><code>POST</code></td>
+      <td>Used for creating resources, or performing custom actions (such as merging a pull request).</td>
+    </tr>
+    <tr>
+      <td><code>PATCH</code></td>
+      <td>Used for updating resources with partial JSON data.  For instance, an Issue resource has <code>title</code> and <code>body</code> attributes.  A PATCH request may accept one or more of the attributes to update the resource.  PATCH is a relatively new and uncommon HTTP verb, so resource endpoints also accept <code>POST</code> requests.</td>
+    </tr>
+    <tr>
+      <td><code>PUT</code></td>
+      <td>Used for replacing resources or collections. For <code>PUT</code> requests with no <code>body</code> attribute, be sure to set the <code>Content-Length</code> header to zero.</td>
+    </tr>
+    <tr>
+      <td><code>DELETE</code></td>
+      <td>Used for deleting resources.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="authentication">Authentication</h2>
+
+<p>There are two ways to authenticate for the RacketLogger API.  Requests that
+require authentication will return <code>404 Not Found</code>, instead of
+<code>403 Forbidden</code>, in some places.  This is to prevent the accidental leakage
+of private repositories to unauthorized users.</p>
+
+<h3 id="oauth2-token-sent-in-a-header">OAuth2 Token (sent in a header)</h3>
+
+<pre class="terminal">
+$ curl -H "Authorization: token OAUTH-TOKEN" https://api.racketlogger.com
+</pre>
+
+<h3 id="oauth2-token-sent-as-a-parameter">OAuth2 Token (sent as a parameter)</h3>
+
+<pre class="terminal">
+$ curl https://api.racketlogger.com/?access_token=OAUTH-TOKEN
+</pre>
+
+<p>Note that OAuth2 tokens can be obtain by emailing support.</p>
+
+<h3 id="oauth2-keysecret">OAuth2 Key/Secret</h3>
+
+<pre class="terminal">
+$ curl 'https://api.racketlogger.com/users/whatever?client_id=xxxx&amp;client_secret=yyyy'
+</pre>
+
+<p>This should only be used in server to server scenarios.  Don’t leak your
+OAuth application’s client secret to your users.</p>
+
+<h2 id="user-agent-required">User Agent Required</h2>
+
+<p>All API requests MUST include a valid <code>User-Agent</code> header. Requests with no <code>User-Agent</code>
+header will be rejected. We request that you use your RacketLogger username, or the name of your
+application, for the <code>User-Agent</code> header value. This allows us to contact you if there are problems.</p>
+
+<p>Here’s an example:</p>
+
+<pre class="terminal">
+User-Agent: Awesome-Tennis-App
+</pre>
+
+<p>If you provide an invalid <code>User-Agent</code> header, you will receive a <code>403 Forbidden</code> response.</p>
+
+<h4 id="utc">UTC</h4>
+
+<p>We use UTC until proper timezone handling can be done.</p>
+
+    </div>
+    <footer id="footer">
+      <div class="lower_footer">
+        <div class="row">
+          <hr />
+          <div class="footer-cell">
+            <ul class="list-unstyled">
+		<li>
+		<a title="About RacketLogger" href="/about">About</a>
+		&middot;
+		<a href="http://www.racketlogger.com/leagues/flex">Flex Leagues</a>
+		&middot;
+		<a href="http://www.racketlogger.com/feedback">Feedback</a>
+		&middot;
+		<a href="https://github.com/racketlogger/docs">Source Code</a>
+	      </li>
+            </ul>
+          </div>
+          <div class="footer-cell">
+            <ul class="list-unstyled">
+		    <li>
+		    <a title="RacketLogger Home" href="http://www.racketlogger.com/">Home</a>
+		    &middot;
+		    <a title="Follow RacketLogger in Facebook" target="_blank" class="" href="https://www.facebook.com/racketlogger">Facebook</a>
+		    &middot;
+		    <a title="Follow RacketLogger in Twitter" class="" target="_blank" href="https://twitter.com/RacketLogger">Twitter</a>
+		    &middot;
+		    <a title="Follow RacketLogger in Google+" class="" target="_blank" rel="publisher" href="https://plus.google.com/113862405950070459386">Google+</a>
+		    </li>
+            </ul>
+          </div>
+          <div class="footer-cell">
+            <ul class="list-unstyled">
+			  <li>
+			  <a href="http://www.racketlogger.com/string" title="Tennis String Specs">String Specs</a>
+			  &middot;
+			  <a href="http://www.racketlogger.com/racket" title="Tennis Racket Specs">Racket Specs</a>
+			  <br/>
+			  <a href="http://www.racketlogger.com/string-explorer" title="Interactive Tennis String Specs Explorer">String Explorer</a>
+			  &middot;
+			  <a href="http://www.racketlogger.com/racket-explorer" title="Interactive Tennis Racket Specs Explorer">Racket Explorer</a>
+			  </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper">
+          <small id="copyright">Site design and logo &#169; 2015 <a href="http://www.racketlogger.com">RacketLogger</a>. User contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> with <a href="https://github.com/racketlogger/website/wiki/Attribution">attribution required</a>.</small><br /><br />
+      </div>
+    </footer>
+  </body>
+</html>
